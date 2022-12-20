@@ -18,7 +18,7 @@ with header:
 with features:
     st.header("Inputs")
     st.text("Please enter the relevant data for price prediction")
-    #sel_col = st.columns([5,1])
+    sel_col, disp_col = st.columns([5,1])
     area_sel = st_col.slider("area",min_value=810,max_value=2080,value=1302,step=1)
     latitude_sel = st_col.slider("latitude",min_value=28.24,max_value=28.79,value=28.56,step=0.01)
     longitude_sel = st_col.slider("longitude",min_value=76.88,max_value=77.56,value=77.29,step=0.01)
