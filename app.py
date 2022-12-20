@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from pandas.core.generic import pickle
-from sklearn.ensemble import RandomForestRegressor
+#from sklearn.ensemble import RandomForestRegressor
 
 header = st.container()
 features = st.container()
