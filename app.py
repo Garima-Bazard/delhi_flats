@@ -18,7 +18,7 @@ with header:
 with features:
     st.header("Inputs")
     st.text("Please enter the relevant data for price prediction")
-    
+    sel_col, disp_col = st.columns([5,1])
     balconies_sel = sel_col.slider("Balcony",min_value=1,max_value=10,value=0,step=1)
 
      
