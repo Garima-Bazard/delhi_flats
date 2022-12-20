@@ -18,7 +18,7 @@ with features:
     st.header("Inputs")
     st.text("Please enter the relevant data for price prediction")
     
-     balconies_sel = sel_col.slider("Balcony",min_value=1,max_value=10,value=0,step=1)
+    balconies_sel = sel_col.slider("Balcony",min_value=1,max_value=10,value=0,step=1)
 
      
 
