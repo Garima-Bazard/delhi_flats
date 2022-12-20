@@ -52,4 +52,4 @@ if st.button('Make Prediction'):
         new_main_currency = main_currency.replace(",", ".")
         currency = new_main_currency + seperator_of_fraction + fractional_currency
         print(estimate_price)
-    st.write("The estimated price is: Rs {estimate_price}")
+    st.write(f"The estimated price is: Rs {estimate_price}")
