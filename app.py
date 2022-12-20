@@ -46,7 +46,7 @@ if st.button('Make Prediction'):
     
     seperator_of_thousand = "."
     seperator_of_fraction = ","
-    estimate_price = "${:,.2f}".format(estimate_price)
+    estimate_price = "{:,.2f}".format(estimate_price)
     if seperator_of_thousand == ".":
         main_currency, fractional_currency = estimate_price.split(".")[0], estimate_price.split(".")[1]
         new_main_currency = main_currency.replace(",", ".")
