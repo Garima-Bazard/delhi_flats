@@ -42,6 +42,14 @@ with open(pkl_filename, 'rb') as file:
 #price
 if st.button('Make Prediction'):
     estimate_price = pickle_model.predict(df_new.values)[0]
-    print(estimate_price)
-    price = {:0,.2f}.format(float(estimate_price)
-    st.write("The estimated price is: Rs {price}")
+   
+    
+    seperator_of_thousand = "."
+    seperator_of_fraction = ","
+    estimate_price = "${:,.2f}".format(price)
+    if seperator_of_thousand == ".":
+        main_currency, fractional_currency = estimate_price.split(".")[0], estimate_price.split(".")[1]
+        new_main_currency = main_currency.replace(",", ".")
+        currency = new_main_currency + seperator_of_fraction + fractional_currency
+        print(estimate_price)
+    st.write("The estimated price is: Rs {estimate_price}")
