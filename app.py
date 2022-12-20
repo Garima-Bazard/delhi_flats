@@ -43,4 +43,4 @@ with open(pkl_filename, 'rb') as file:
 if st.button('Make Prediction'):
     estimate_price = pickle_model.predict(df_new.values)[0]
     print(estimate_price)
-    st.write("The estimated price is: Rs {:0,.2f}".format(float(estimate_price))
+    st.write("The estimated price is: Rs {:0,.2f}.format(float(estimate_price)")
