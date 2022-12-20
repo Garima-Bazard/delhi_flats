@@ -29,4 +29,19 @@ a = np.array([[0]]*5).reshape(1,5)
 df_new = pd.DataFrame(a)
 df_new.columns = ["area", "latitude", "longitude", "Bedrooms", "Balcony"]
 
+df_new['area'] = area_sel
+df_new['latitude'] = latitude_sel
+df_new['longitude'] = longitude_sel
+df_new['Bedrooms'] = Bedrooms_sel
+df_new['Balcony'] = Balcony_sel
+
+pkl_filename = "pickle_model.pkl"
+with open(pkl_filename, 'rb') as file:
+    pickle_model = pickle.load(file)
+
+#price
+if st.button('Make Prediction'):
+    estimate_price = pickle_model.predict(df_new.values)[0]
+    print(estimate_price)
+    st.write(f"Theestimated price is: Rs {estimate_price}")
 
