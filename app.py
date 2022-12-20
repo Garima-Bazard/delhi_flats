@@ -35,7 +35,7 @@ df_new['longitude'] = longitude_sel
 df_new['Bedrooms'] = Bedrooms_sel
 df_new['Balcony'] = Balcony_sel
 
-pkl_filename = "pickle_model.pkl"
+pkl_filename = "pickle_model_best.pkl"
 with open(pkl_filename, 'rb') as file:
     pickle_model = pickle.load(file)
 
