@@ -19,7 +19,7 @@ with features:
     st.header("Inputs")
     st.text("Please enter the relevant data for price prediction")
     sel_col, disp_col = st.columns([5,1])
-    area_sel = sel_col.slider("area",min_value=810,max_value=2080,value=1302,step=1)
+    area_sel = sel_col.slider("area (ft)",min_value=810,max_value=2080,value=1302,step=1)
     latitude_sel = sel_col.slider("latitude",min_value=28.24,max_value=28.79,value=28.56,step=0.01)
     longitude_sel = sel_col.slider("longitude",min_value=76.88,max_value=77.56,value=77.29,step=0.01)
     Bedrooms_sel = sel_col.slider("Bedrooms",min_value=2,max_value=10,value=3,step=1)
@@ -43,5 +43,5 @@ with open(pkl_filename, 'rb') as file:
 if st.button('Make Prediction'):
     estimate_price = pickle_model.predict(df_new.values)[0]
     print(estimate_price)
-    st.write(f"Theestimated price is: Rs {estimate_price}")
+    st.write("The estimated price is: Rs {:0,.2f}".format(float(estimate_price) )
 
