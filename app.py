@@ -27,6 +27,6 @@ with features:
 
 a = np.array([[0]]*5).reshape(1,5)
 df_new = pd.DataFrame(a)
-df_new.columns = ["area, "latitude", "longitude", "Bedrooms", "Balcony"]
+df_new.columns = ["area", "latitude", "longitude", "Bedrooms", "Balcony"]
 
 
