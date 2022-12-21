@@ -14,8 +14,8 @@ Duplicate rows were dropped from the data.
 ### Exploratory Data Analysis (EDA), Data preprocessing and Feature Engineering
 Sweetviz and manual exploration was done.
 The following were observed:
-1.There was a correlation between bathrooms and bedrooms, bedrooms had higher correlation with the target, price and thus bathrooms column was dropped from the data.
-2.Price has a strong correlation with area and number of bedrooms (same is intuitively concluded).
+1. There was a correlation between bathrooms and bedrooms, bedrooms had higher correlation with the target, price and thus bathrooms column was dropped from the data.
+2. Price has a strong correlation with area and number of bedrooms (same is intuitively concluded).
 3.Address was dropped as longitude and latitude columns were available and as such have been taken as feature columns.
 4.Columns with low and high cardinality values were droppped from the dataset.
 5.Price per sqft column was dropped to avoid leakage in the model.
